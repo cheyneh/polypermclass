@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 
 
 import itertools as it
@@ -11,6 +11,15 @@ from operator import mul
 from functools import reduce
 import functools
 
+
+# Try to support both python 2 and 3 -
+# some names are slightly different
+
+import sys
+if sys.version_info >= (3,0):
+    izip_longest = it.zip_longest
+else:
+    izip_longest = it.izip_longest
 
 
 
@@ -183,6 +192,7 @@ class PolyClass(object):
             # sympy magic, find series, extract coefficients
             coeffs = gfcn.series(x, 0, n + 1).as_poly().coeffs()
             coeffs.reverse()
+            del coeffs[0]
             return list(enumerate(coeffs))[1:]
         if using_sage:
             gfcn = self.genfcn()
@@ -963,7 +973,7 @@ class Polynomial(list):
 
     def __add__(self, other):
         if isinstance(other, Polynomial):
-            zipped = it.izip_longest(self, other, fillvalue = 0)
+            zipped = izip_longest(self, other, fillvalue = 0)
             return Polynomial( [a + b for a,b in zipped] )
         else:
             newpoly = self[:]
