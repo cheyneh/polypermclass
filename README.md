@@ -1,7 +1,7 @@
 polypermclass
 =============
 
-### Implements algorithm found in *link to paper* to enumerate polynomial permutation classes
+### Implements algorithm found in [this paper](http://www.math.ufl.edu/~cheyne42/papers/polyclass) to enumerate polynomial permutation classes
 
 
 Installation
