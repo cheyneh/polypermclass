@@ -1,7 +1,7 @@
 polypermclass
 =============
 
-### Implements algorithm found in [this paper](http://www.math.ufl.edu/~cheyne42/papers/polyclass) to enumerate polynomial permutation classes
+### Implements algorithm found in [this paper](http://www.cheynehomberger.com/papers/polyclass) to enumerate polynomial permutation classes
 
 
 Installation
@@ -9,12 +9,12 @@ Installation
 
 The easiest way is to use 
 
-    git clone https://github.com/cheyneh/permpy.git
+    git clone https://github.com/cheyneh/polypermclass.git
 
 This will copy the package into the current directory. 
 If you don't have a git client, you can download the package 
 as a zip file from 
-[here](http://github.com/cheyneh/permpy/zipball/master/).
+[here](http://github.com/cheyneh/polypermclass/zipball/master/).
 
 Then just use 
 
